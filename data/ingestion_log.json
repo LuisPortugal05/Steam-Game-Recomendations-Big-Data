@@ -1,0 +1,26 @@
+[
+    {
+        "file_name": "games.csv",
+        "ingestion_timestamp": "2026-04-14 00:45:13",
+        "file_size_mb": 4.64,
+        "status": "RAW_STORED_SUCCESSFULLY"
+    },
+    {
+        "file_name": "games_metadata.json",
+        "ingestion_timestamp": "2026-04-14 00:45:13",
+        "file_size_mb": 16.74,
+        "status": "RAW_STORED_SUCCESSFULLY"
+    },
+    {
+        "file_name": "recommendations.csv",
+        "ingestion_timestamp": "2026-04-14 00:45:13",
+        "file_size_mb": 1929.5,
+        "status": "RAW_STORED_SUCCESSFULLY"
+    },
+    {
+        "file_name": "users.csv",
+        "ingestion_timestamp": "2026-04-14 00:45:13",
+        "file_size_mb": 184.12,
+        "status": "RAW_STORED_SUCCESSFULLY"
+    }
+]
