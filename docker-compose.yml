@@ -1,0 +1,35 @@
+services:
+  spark-jupyter:
+    image: jupyter/pyspark-notebook:latest
+    container_name: spark_env
+    ports:
+      - "8888:8888" 
+      - "4040:4040" 
+    volumes:
+      - ./:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+
+  postgres-db:
+    image: postgres:15
+    container_name: curated_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=steam_analytics
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase_dashboard
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres-db
+
+volumes:
+  pgdata:
